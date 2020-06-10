@@ -1,0 +1,59 @@
+RabbitMQ
+08 June 2020
+
+Nhat Hoang Minh Pham
+nhatphm@dgroup.co
+
+* The current use case of OpenApp
+- Building a high-availability chat system
+- Enable to handle various kind of messages
+- Preventing message loss, message duplication and incorrect ordering
+
+.image images/openappchat.png 360 170
+
+* Overview
+- Basic of Message Queue
+- What / When / How - RabbitMQ?
+- Comparison with Kafka
+- Discussion
+
+* Basic of Message Queue
+- A message queue is an architecture that provides *asynchronous* communication by sending messages to each other
+- The message queue provides temporary message storage when the destination program is busy or not connected
+
+* Basic of Message Queue
+.image images/message-queue-small.png 300 400
+
+
+* Benifits of Message Queue
+- Redundancy
+- Asynchronous Messaging
+- Resiliency
+- Scalability
+
+.image images/thumb-mq.jpg 250 500
+
+* RabbitMQ, what is that?
+- An open source multi-protocol messaging broker
+- Supports various messaging protocols like AMQP, MQTT, STOMP, etc
+.image images/rabbitmq-logo-1.png
+
+* RabbitMQ's components
+- Producer – client which creates a message;
+- Consumer – client which receives a message;
+- Queue – unlimited queue that stores messages;
+- Exchange – component allowing routing messages to sent to it to different queues.
+
+* Comparison with Kafka
+- 11
+
+* Producer
+.code hello-world/producer.js
+
+* Consumer
+.code hello-world/consumer.js
+
+* Simple use cases
+.image images/sample-queue1.png 130 250
+.image images/sample-queue2.png 130 250
+.image images/sample-queue3.png 130 250
