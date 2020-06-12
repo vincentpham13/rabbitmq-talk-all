@@ -1,5 +1,5 @@
 RabbitMQ
-08 June 2020
+12 June 2020
 
 Nhat Hoang Minh Pham
 nhatphm@dgroup.co
@@ -13,12 +13,12 @@ nhatphm@dgroup.co
 
 * Overview
 - Basic of Message Queue
-- What / When / How - RabbitMQ?
+- What is RabbitMQ?
 - Comparison with Kafka
 - Discussion
 
 * Basic of Message Queue
-- A message queue is an architecture that provides *asynchronous* communication by sending messages to each other
+- A message queue is an architecture that provides *asynchronous* communication by sending messages between services/applications
 - The message queue provides temporary message storage when the destination program is busy or not connected
 
 * Basic of Message Queue
@@ -26,15 +26,15 @@ nhatphm@dgroup.co
 
 
 * Benifits of Message Queue
-- Redundancy
-- Asynchronous Messaging
-- Resiliency
+- Better Performance
+- Increased Reliability
 - Scalability
+- Simplifed Decoupling
 
 .image images/thumb-mq.jpg 250 500
 
 * RabbitMQ, what is that?
-- An open source multi-protocol messaging broker
+- An open source messaging broker
 - Supports various messaging protocols like AMQP, MQTT, STOMP, etc
 .image images/rabbitmq-logo-1.png
 
@@ -43,17 +43,38 @@ nhatphm@dgroup.co
 - Consumer – client which receives a message;
 - Queue – unlimited queue that stores messages;
 - Exchange – component allowing routing messages to sent to it to different queues.
+.image images/exchanges-topic-fanout-direct.png 330 430
 
-* Comparison with Kafka
-- 11
 
-* Producer
-.code hello-world/producer.js
-
-* Consumer
-.code hello-world/consumer.js
-
-* Simple use cases
+* Common use cases
 .image images/sample-queue1.png 130 250
 .image images/sample-queue2.png 130 250
 .image images/sample-queue3.png 130 250
+
+.caption Get started with [[https://www.rabbitmq.com/getstarted.html][RabbitMQ Tutorials]]
+
+* Comparison with Kafka
+.image images/kafka-setup.png _ _
+
+* Comparison with Kafka
+- Message handling (message replay)
+- Protocol
+- Routing
+- Message Priority
+- Acknowledgment
+- Scaling
+- ...
+
+.caption When to use RabbitMQ or Apache Kafka by [[https://www.cloudamqp.com/blog/2019-12-12-when-to-use-rabbitmq-or-apache-kafka.html][Lovisa Johansson]]
+
+* Comparison with Kafka
+.image images/exchanges-bidings-routing-keys.png _ _
+
+
+* Producer
+.code demo/hello-world/producer.js
+
+* Consumer
+.code demo/hello-world/consumer.js
+
+* Discussion
